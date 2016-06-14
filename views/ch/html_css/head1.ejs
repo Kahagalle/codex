@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Challenge <%= no %></title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap -->
+    <!-- <link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
+    <script src="/javascripts/bootstrap.min.js"></script>-->
+
+    <!-- jQuery -->
+    <script src="/javascripts/jquery-1.12.3.min.js"></script>
+
+    <!-- Editors -->
+    <link rel='stylesheet' href='/stylesheets/editors.css' />
+    <script type="text/javascript" src="/javascripts/editors1.js"></script>
+
+    <!-- Sweetalert -->
+    <script src="/javascripts/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/sweetalert.css">
+
+    <!-- NavBar -->
+    <link rel="stylesheet" href="/stylesheets/navbar.css" type="text/css" charset="utf-8"/>
+
+
+</head>
+<body>
+<ul id="navigation">
+    <li class="home"><a href="/" title="Home"></a></li>
+    <li class="challenges"><a href="/ch" title="Challenges"></a></li>
+    <li class="login"><a href="/login" title="Login"></a></li>
+    <li class="contact"><a href="/contact" title="Contact"></a></li>
+</ul>
+<div class="container">
+    <section>
+        <div class="page-header">
+            <h2 class="pull-left">Challenge <%= no %> - <%= type %></h2>
+            <div class="pull-right btns">
+                <button id="test" type="button" class="btn btn-warning">Test code</button>
+                <button id="next" type="button" class="btn btn-info" onclick="window.location.href='/ch/<%= next %>'">Next</button>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </section>
+    <div class="row">
+        <div class="col-md-3">
+            <h4>Instructions</h4>
+            <div class="inst">

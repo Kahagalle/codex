@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+	<link rel="stylesheet" href="/stylesheets/animations.css" type="text/css">
+
+	<!-- STUFF JUST FOR THIS TEMPLATE -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="/stylesheets/home.css" type="text/css">
+
+	<style type="text/css">
+		.topcorner{
+			position:absolute;
+			top:3px;
+			right:10px;
+			color: white;
+			font-size: 17px;
+		}
+		.auth {
+			color: white;
+			font-size: 17px;
+
+		}
+		a:hover { color: black;
+			text-decoration: none;
+		}
+	</style>
+</head>
+<body>
+
+<header class='mainHeader'>
+	<div class="topcorner">
+		<% if(!user){ %>
+		<a class="auth" href="/login">Login</a> | <a class="auth" href="/register">Register</a>
+		<% } %>
+
+		<% if(user){ %>
+		Hello, <%= user.username %> |
+		<a class="auth" href="/logout">Logout</a>
+		<% } %>
+
+	</div>
+	<div class='container'>
+		<div class='animatedParent' data-sequence='500' >
+
+			<h1 class='animated growIn slower'  data-id='1'>CodeX</h1>
+			<h2 class='animated bounceInRight slower'  data-id='2'>Welcome to a new kind of learning!</h2>
+			<div class='buttons-inline animated bounceInLeft slower'   data-id='3'><a class="btn btn-primary" href="/ch">Get Started</a></div>
+			<div class='buttons-inline animated bounceInRight slower' data-id='4'><a class='btn btn-default' href='/about'>About Us</a></div>
+
+		</div>
+	</div>
+</header>
+<div class='container'>
+	<div class='animatedParent'>
+		<h2 class='animated growIn slowest'>jQuery</h2>
+	</div>
+	<div class='animatedParent col-md-6' data-sequence='1000' >
+		<p class='animated bounceInLeft' data-id='1'>
+			jQuery is a fast, small, and feature-rich JavaScript library.
+		</p>
+		<p class='animated bounceInLeft' data-id='2'>
+			It makes things like HTML document traversal and manipulation, event handling, <b>animation</b>, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers.
+		</p>
+		<p class='animated bounceInLeft' data-id='3'>
+			With a combination of versatility and extensibility, jQuery has changed the way that millions of people write <b>JavaScript</b>.
+		</p>
+	</div>
+	<div class='animatedParent col-md-6'>
+				<pre class='animated bounceInRight slow'>
+	var hiddenBox = $( "#banner-message" );
+	$( "#button-container button" ).on( "click", function( event ) {
+	  hiddenBox.show();
+	});
+				</pre>
+	</div>
+</div>
+
+<div class='greyBackground'>
+	<div class='container' >
+		<div class='animatedParent' >
+			<h2 class='animated growIn slow'>CSS</h2>
+		</div>
+
+		<!-- Sequencing -->
+		<div class='animatedParent row article'>
+			<h3 class='animated bounceInDown'></h3>
+			<div class='col-md-4'>
+
+				<p class='animated bounceInLeft slow'>
+					Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup languages.
+				</p>
+			</div>
+			<div class='animatedParent col-md-8'>
+						<pre class='animated bounceInRight slow'>
+			.buttons-inline{
+				display:inline-block;
+			}
+			.findMe{
+				color:#fff;
+				margin-top:20px;
+			}
+						</pre>
+			</div>
+		</div>
+
+		<div class='animatedParent'>
+			<h2 class='animated growIn slowest'>HTML</h2>
+		</div>
+
+		<!-- Offset -->
+		<div class='animatedParent row article'>
+			<h3 class='animated bounceInDown'></h3>
+			<div class='col-md-6'>
+				<p class='animated bounceInLeft slow'>
+					HyperText Markup Language, commonly abbreviated as HTML, is the standard markup language used to create web pages.
+				</p>
+				<p class='animated bounceInRight slow'>
+					Along with CSS, and JavaScript, HTML is a cornerstone technology used to create web pages, as well as to create user interfaces for mobile and web applications.
+				</p>
+			</div>
+			<div class='animatedParent col-md-6'>
+						<pre class='animated bounceInRight slow'>
+		&lt;!DOCTYPE html&gt;
+		&lt;html&gt;
+		&lt;body&gt;
+
+		&lt;h1>This is heading 1&lt;/h1&gt;
+		&lt;p>This is a paragraph&lt;/p&gt;
+
+		&lt;/body&gt;
+		&lt;/html>
+						</pre>
+			</div>
+		</div>
+
+	</div>
+
+</div>
+
+</body>
+</html>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src='/javascripts/css3-animate-it.js'></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
