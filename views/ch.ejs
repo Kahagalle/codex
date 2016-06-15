@@ -8,7 +8,27 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
   <link rel='stylesheet' href='/stylesheets/editors.css' />
 
+  <!-- jQuery -->
+  <script src="/javascripts/jquery-1.12.3.min.js"></script>
+
   <title>Challenges</title>
+  <script src="/javascripts/challenges.js"></script>
+  <script>
+    $(document).ready(function(){
+      var tb = '';
+      $.each(ch, function(i, field){
+        d= ch[i]['no'];
+        tb += '<tr>';
+        tb += '<td>' + ch[i]['no']+'</td>';
+        tb += '<td><a href="ch/'+ ch[i]['no']+'">' + ch[i]['title']+'</a></td>';
+        tb += '<td>' + ch[i]['type']+'</td>';
+        tb += '<td><center><span class="glyphicon glyphicon-download-alt"></span></center></td>';
+        tb += '</tr>';
+      });
+      $('#tb').html(tb);
+      console.log(tb);
+    });
+  </script>
 
 </head>
 <body>
@@ -52,74 +72,25 @@
     </div>
   </section>
 
-  <table class="table">
-    <thead>
+  <div class="col-md-1"></div>
+  <div class="col-md-10">
+    <table class="table">
+      <thead>
       <tr>
         <th>No.</th>
         <th>Title</th>
         <th>Language</th>
+        <th><center>Download</center></th>
       </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>1</td>
-        <td><a href='/ch/1'>Introduction to HTML</a></td>
-        <td>HTML</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td><a href='/ch/2'>Working with headers</a></td>
-        <td>HTML</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td><a href='/ch/3'>Working with paragraphs</a></td>
-        <td>HTML</td>
-      </tr>
-      <tr>
-        <td>4</td>
-        <td><a href='/ch/4'>Introduction to unordered list</a></td>
-        <td>HTML</td>
-      </tr>
-      <tr>
-        <td>5</td>
-        <td><a href='/ch/5'>Introduction to ordered list</a></td>
-        <td>HTML</td>
-      </tr>
-      <tr>
-        <td>6</td>
-        <td><a href='/ch/6'>Adding images</a></td>
-        <td>HTML</td>
-      </tr>
-      <tr>
-        <td>7</td>
-        <td><a href='/ch/7'>Creating a table</a></td>
-        <td>HTML</td>
-      </tr>
-      <tr>
-        <td>8</td>
-        <td><a href='/ch/8'>Introduction to CSS</a></td>
-        <td>CSS</td></td>
-      </tr>
-      <tr>
-        <td>9</td>
-        <td><a href='/ch/9'>Changing fonts</a></td>
-        <td>CSS</td>
-      </tr>
-    </tbody>
-  </table>
-  <!--<table class="table">
-    <thead>
+      </thead>
+      <tbody id="tb">
 
-    </thead>
-    <tbody>
+      </tbody>
+    </table>
+  </div>
 
-    </tbody>
-  </table>-->
 
 </div>
 </body>
 </html>
-
-
 
