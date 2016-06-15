@@ -21,9 +21,9 @@ $(function(){
         $('head', targetp).append('<style>'+css+'</style>');
     });
 
-    /* $('#getS').click(function(){
+     $('#getS').click(function(){
      var sourceCode = $('#previewTarget').contents().find('html').html();
-     alert(sourceCode);
+     swal("",sourceCode);
      return false;
-     });*/
+     });
 });
