@@ -6,7 +6,6 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
     <!-- jQuery -->
     <script src="/javascripts/jquery-1.12.3.min.js"></script>
@@ -22,6 +21,8 @@
     <!-- NavBar -->
     <link rel="stylesheet" href="/stylesheets/navbar.css" type="text/css" charset="utf-8"/>
 
+    <!-- Bootstrap JS-->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 </head>
 <body>
@@ -38,7 +39,7 @@
             <div class="pull-right btns">
                 <button id="test" type="button" class="btn btn-warning">Test code</button>
                 <button id="next" type="button" class="btn btn-info" onclick="window.location.href='/ch/<%= next %>'">Next</button>
-                <button id="getS" type="button" class="btn btn-success">Source Code</button>
+                <button id="getS" class="btn btn-success" type="button">Source Code</button>
             </div>
             <div class="clearfix"></div>
         </div>

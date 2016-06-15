@@ -22,8 +22,8 @@ $(function(){
     });
 
      $('#getS').click(function(){
-     var sourceCode = $('#previewTarget').contents().find('html').html();
-     swal("",sourceCode);
-     return false;
+         var sourceCode = $('#previewTarget').contents().find('html').html();
+         swal("",sourceCode);
+         return false;
      });
 });

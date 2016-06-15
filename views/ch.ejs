@@ -2,10 +2,10 @@
 <html>
 <head>
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
   <!-- Optional theme -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
   <link rel='stylesheet' href='/stylesheets/editors.css' />
 
   <!-- jQuery -->
@@ -22,7 +22,6 @@
         tb += '<td>' + ch[i]['no']+'</td>';
         tb += '<td><a href="ch/'+ ch[i]['no']+'">' + ch[i]['title']+'</a></td>';
         tb += '<td>' + ch[i]['type']+'</td>';
-        tb += '<td><center><span class="glyphicon glyphicon-download-alt"></span></center></td>';
         tb += '</tr>';
       });
       $('#tb').html(tb);
@@ -80,7 +79,6 @@
         <th>No.</th>
         <th>Title</th>
         <th>Language</th>
-        <th><center>Download</center></th>
       </tr>
       </thead>
       <tbody id="tb">
@@ -88,7 +86,6 @@
       </tbody>
     </table>
   </div>
-
 
 </div>
 </body>
